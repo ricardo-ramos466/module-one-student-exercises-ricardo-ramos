@@ -121,55 +121,72 @@ public class Exercises {
         Elementary School received 17 inches of snow. How much more snow
         did Mrs. Hilt's house have?
         */
-
+		int amountOfSnowInInchesAtHiltsHouse = 29;
+		int amountOfSnowInInchesAtBrecknockElementary = 17;
+		int totalSnowAtHiltsHouseAboveElementary = amountOfSnowInInchesAtHiltsHouse-amountOfSnowInInchesAtBrecknockElementary;
 
         /* Exercise 15
         15. Mrs. Hilt has $10. She spends $3 on a toy truck and $2 on a pencil
         case. How much money does she have left?
         */
-
+		double totalMoney = 10;
+		double moneySpentOnToyTruck = 3;
+		double moneySpentOnPencilCase = 2;
+		double remainingMoneyAfterPurchase = totalMoney-(moneySpentOnToyTruck+moneySpentOnPencilCase);
 
         /* Exercise 16
         16. Josh had 16 marbles in his collection. He lost 7 marbles. How many
         marbles does he have now?
         */
-
+		int initialAmountOfMarblesJoshHas = 16;
+		int amountOfMarblesLost = 7;
+		int numbersOfMarblesLeftAfterLoss = initialAmountOfMarblesJoshHas-amountOfMarblesLost;
 
         /* Exercise 17
         17. Megan has 19 seashells. How many more seashells does she need to
         find to have 25 seashells in her collection?
         */
-
+		int amountOfShellsMeganWants = 25;
+		int amountOfShellsMeganHas = 19;
+		int amountOfShellsMeganNeeds =amountOfShellsMeganWants-amountOfShellsMeganHas;
 
         /* Exercise 18
         18. Brad has 17 balloons. 8 balloons are red and the rest are green. How
         many green balloons does Brad have?
         */
-
+		int totalAmountOfBalloons = 17;
+		int totalRedBalloons = 8;
+		int totalGreenBalloons = totalAmountOfBalloons-totalRedBalloons;
 
         /* Exercise 19
         19. There are 38 books on the shelf. Marta put 10 more books on the shelf.
         How many books are on the shelf now?
         */
-
+		int amountOfBooksOnShelf = 38;
+		int newBooksPutOnShelf = 10;
+		int totalBooksOnShelf = amountOfBooksOnShelf+newBooksPutOnShelf;
 
         /* Exercise 20
         20. A bee has 6 legs. How many legs do 8 bees have?
         */
-
+		int amountOfLegsBeesHave = 6;
+		int numberOfBees = 8;
+		int totalBeeLegs = amountOfLegsBeesHave*numberOfBees;
 
         /* Exercise 21
         21. Mrs. Hilt bought an ice cream cone for 99 cents. How much would 2 ice
         cream cones cost?
         */
-
+		int iceCreamConesWanted =2;
+		double costOfIceCreamCones = 0.99;
+		double costOf2Cones = iceCreamConesWanted*costOfIceCreamCones;
 
         /* Exercise 22
         22. Mrs. Hilt wants to make a border around her garden. She needs 125
         rocks to complete the border. She has 64 rocks. How many more rocks
         does she need to complete the border?
         */
-
+		
 
         /* Exercise 23
         23. Mrs. Hilt had 38 marbles. She lost 15 of them. How many marbles does
