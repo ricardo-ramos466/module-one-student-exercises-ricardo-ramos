@@ -26,48 +26,67 @@ public class Exercises {
         3. 3 raccoons are playing in the woods. 2 go home to eat dinner. How
         many raccoons are left in the woods?
         */
-
+		int numberOfRaccoons = 3;
+		int numberOfRaccoonsAtDinner = 2;
+		int raccoonsLeftInTheWoods = numberOfRaccoons-numberOfRaccoonsAtDinner;
 
         /* Exercise 4
         4. There are 5 flowers and 3 bees. How many less bees than flowers?
         */
-
-
+		int amountOfFlowers = 5;
+		int amountOfBees = 3;
+		int amountOfExtraFlowers = amountOfFlowers-amountOfBees;
         /* Exercise 5
         5. 1 lonely pigeon was eating breadcrumbs. Another pigeon came to eat
         breadcrumbs, too. How many pigeons are eating breadcrumbs now?
         */
-
+		int initialAmountOfPigeonsEatingBreadcrumbs = 1;
+		int amountOfNewPigeons = 1;
+		int totalAmountOfPigeonsEatingBreadcrumbs = initialAmountOfPigeonsEatingBreadcrumbs+amountOfNewPigeons;
 
         /* Exercise 6
         6. 3 owls were sitting on the fence. 2 more owls joined them. How many
         owls are on the fence now?
         */
-
+		int initialAmountOfOwlsSittingOnTheFence = 3;
+		int newOwlsThatJoinedTheFence = 2;
+		int totalOwlsSittingOnTheFence = initialAmountOfOwlsSittingOnTheFence+newOwlsThatJoinedTheFence;
 
         /* Exercise 7
         7. 2 beavers were working on their home. 1 went for a swim. How many
         beavers are still working on their home?
         */
-
+		int initialAmountOfBeaversWorkingOnTheirHome = 2;
+		int amountOfBeaversThatWentSwimming = 1;
+		int beaversLeftWorkingOnTheirHome = initialAmountOfBeaversWorkingOnTheirHome-amountOfBeaversThatWentSwimming;
 
         /* Exercise 8
         8. 2 toucans are sitting on a tree limb. 1 more toucan joins them. How
         many toucans in all?
         */
-
+		int initialAmountOfToucansSittingOnTree = 2;
+		int newToucansThatJoined = 1;
+		int totalToucansOnTreeLimb = initialAmountOfToucansSittingOnTree+newToucansThatJoined;
 
         /* Exercise 9
         9. There are 4 squirrels in a tree with 2 nuts. How many more squirrels
         are there than nuts?
         */
-
+		int squirrelsInTheTree = 4;
+		int amountOfNuts = 2;
+		int howManyMoreSquirrelsThanNuts = squirrelsInTheTree-amountOfNuts;
 
         /* Exercise 10
         10. Mrs. Hilt found a quarter, 1 dime, and 2 nickels. How much money did
         she find?
         */
-
+		int totalQuartersHiltFound = 1;
+		int totalDimesHiltFound = 1;
+		int totalNickelsHiltFound = 2;
+		double amountOfMoneyInQuarters = totalQuartersHiltFound*0.25;
+		double amountOfMoneyInDimes = totalDimesHiltFound*0.10;
+		double amountOfMoneyInNickels = totalNickelsHiltFound*0.05;
+		double totalAmountOfMoneyFound =amountOfMoneyInDimes+amountOfMoneyInNickels+amountOfMoneyInQuarters;
 
         /* Exercise 11
         11. Mrs. Hilt's favorite first grade classes are baking muffins. Mrs. Brier's
@@ -75,20 +94,27 @@ public class Exercises {
         Mrs. Flannery's class bakes 17 muffins. How many muffins does first
         grade bake in all?
         */
-
+		int muffinsBakedByBriersClass = 18;
+		int muffinsBakedByMacAdamsClass =20;
+		int muffinsBakedByFlannerysClass = 17;
+		int totalMuffinsBakedInFirstGradeClasses =muffinsBakedByBriersClass+muffinsBakedByFlannerysClass+muffinsBakedByMacAdamsClass;
 
         /* Exercise 12
         12. Mrs. Hilt bought a yoyo for 24 cents and a whistle for 14 cents. How
         much did she spend in all for the two toys?
         */
-
+		double costOfYoyo = 0.24;
+		double costOfWhistle = 0.14;
+		double totalCostOfToys =costOfWhistle+costOfYoyo;
 
         /* Exercise 13
         13. Mrs. Hilt made 5 Rice Krispies Treats. She used 8 large marshmallows
         and 10 mini marshmallows.How many marshmallows did she use
         altogether?
         */
-
+		int amountOfLageMarshmallows = 8;
+		int amountOfMiniMarshmellows = 10;
+		int totalAmountOfMarshMellows = amountOfMiniMarshmellows+amountOfLageMarshmallows;
 
         /* Exercise 14
         14. At Mrs. Hilt's house, there was 29 inches of snow, and Brecknock
