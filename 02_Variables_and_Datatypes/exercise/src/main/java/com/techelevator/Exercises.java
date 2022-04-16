@@ -186,45 +186,58 @@ public class Exercises {
         rocks to complete the border. She has 64 rocks. How many more rocks
         does she need to complete the border?
         */
-		
+		int amountOfRocksForHiltsBorder = 125;
+		int amountOfRocksHiltHas = 64;
+		int amountOfRocksHiltNeeds = amountOfRocksForHiltsBorder-amountOfRocksHiltHas;
 
         /* Exercise 23
         23. Mrs. Hilt had 38 marbles. She lost 15 of them. How many marbles does
         she have left?
         */
-
+		int amountOfMarblesHiltHas = 38;
+		int amountOfMarblesHiltLost = 15;
+		int totalNumberOfMarbles = amountOfMarblesHiltHas-amountOfMarblesHiltLost;
 
         /* Exercise 24
         24. Mrs. Hilt and her sister drove to a concert 78 miles away. They drove 32
         miles and then stopped for gas. How many miles did they have left to drive?
         */
-
+		int amountOfMilesForConcert = 78;
+		int amountOfMileDrivenByHilt =32;
+		int amountOfMilesLeftForConcert= amountOfMilesForConcert-amountOfMileDrivenByHilt;
 
         /* Exercise 25
         25. Mrs. Hilt spent 1 hour and 30 minutes shoveling snow on Saturday
         morning and 45 minutes shoveling snow on Saturday afternoon. How
         much total time (in minutes) did she spend shoveling snow?
         */
-
+		int amountOfHoursSpentShovelingSnowOnSaturdayMorning = 1;
+		int amountOfMinutesSpentShovelingSnowOnSaturdayMorning = 30+(amountOfHoursSpentShovelingSnowOnSaturdayMorning*60);
+		int amountOfMinutesSpentShovelingSnowOnSaturdayEvening = 45;
+		int totalMinutesSpentShovelingSnow = amountOfMinutesSpentShovelingSnowOnSaturdayMorning+amountOfMinutesSpentShovelingSnowOnSaturdayEvening;
 
         /* Exercise 26
         26. Mrs. Hilt bought 6 hot dogs. Each hot dog cost 50 cents. How much
         money did she pay for all of the hot dogs?
         */
-
+		double costOfHotDogForHilt = 0.50;
+		int numberOfHotDogsBoughtByHilt = 6;
+		double totalCostOfHotDogsBoughtByHilt =costOfHotDogForHilt*numberOfHotDogsBoughtByHilt;
 
         /* Exercise 27
         27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
         she buy with the money she has?
         */
-
+		double amountOfMoneyHiltHas = 0.50;
+		double costOfPencilForHilt = 0.07;
+		int amountOfPencilsThatCanBeBoughtByHilt = (int) (amountOfMoneyHiltHas/costOfPencilForHilt);
 
         /* Exercise 28
         28. Mrs. Hilt saw 33 butterflies. Some of the butterflies were red and others
         were orange. If 20 of the butterflies were orange, how many of them
         were red?
         */
-
+		
 
         /* Exercise 29
         29. Kate gave the clerk $1.00. Her candy cost 54 cents. How much change
