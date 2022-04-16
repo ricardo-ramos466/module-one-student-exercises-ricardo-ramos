@@ -237,80 +237,106 @@ public class Exercises {
         were orange. If 20 of the butterflies were orange, how many of them
         were red?
         */
-		
+		int butterfliesSeenByHilt = 33;
+		int orangeButterfliesSeenByHilt = 20;
+		int redButterfliesSeenByHilt = butterfliesSeenByHilt-orangeButterfliesSeenByHilt;
 
         /* Exercise 29
         29. Kate gave the clerk $1.00. Her candy cost 54 cents. How much change
         should Kate get back?
         */
-
+		double moneyHandedByKate = 1.00;
+		double costOfCandyForKate = 0.54;
+		double changeForKateAfterCandyBought = moneyHandedByKate-costOfCandyForKate;
 
         /* Exercise 30
         30. Mark has 13 trees in his backyard. If he plants 12 more, how many trees
         will he have?
         */
-
+		int treesMarkHasInBackyard = 13;
+		int amountOfTreesMarkWantsToPlant = 12;
+		int totalTreesAfterMarkPlantsNewTrees = treesMarkHasInBackyard+amountOfTreesMarkWantsToPlant;
 
         /* Exercise 31
         31. Joy will see her grandma in two days. How many hours until she sees
         her?
         */
-
+		int daysTillJoySeesHerGrandma = 2;
+		int hoursInADay = 24;
+		int hoursUntillJoySeesGrandma = daysTillJoySeesHerGrandma*hoursInADay;
 
         /* Exercise 32
         32. Kim has 4 cousins. She wants to give each one 5 pieces of gum. How
         much gum will she need?
         */
-
+		int cousinsKimHas = 4;
+		int amountOfGumSheWantsToGiveEach = 5;
+		int amountOfGumKimNeeds = cousinsKimHas*amountOfGumSheWantsToGiveEach;
 
         /* Exercise 33
         33. Dan has $3.00. He bought a candy bar for $1.00. How much money is
         left?
         */
-
+		double moneyDanHas = 3.00;
+		double priceOfCandyBar =1.00;
+		double moneyDanHasLeft = moneyDanHas-priceOfCandyBar;
 
         /* Exercise 34
         34. 5 boats are in the lake. Each boat has 3 people. How many people are
         on boats in the lake?
         */
-
+		int boatsOnTheLake = 5;
+		int peoplePerBoat = 3;
+		int totalPeopleOnTheLake = boatsOnTheLake*peoplePerBoat;
 
         /* Exercise 35
         35. Ellen had 380 legos, but she lost 57 of them. How many legos does she
         have now?
         */
-
+		int legosEllenHasInitially = 380;
+		int legosEllenLost = 57;
+		int legosLeftForEllen = legosEllenHasInitially-legosEllenLost;
 
         /* Exercise 36
         36. Arthur baked 35 muffins. How many more muffins does Arthur have to
         bake to have 83 muffins?
         */
-
+		int muffinsBakedByArthur = 35;
+		int muffinsArthurNeedsToBake = 83;
+		int muffinsLeftForArthurToBake = muffinsArthurNeedsToBake-muffinsBakedByArthur;
 
         /* Exercise 37
         37. Willy has 1400 crayons. Lucy has 290 crayons. How many more
         crayons does Willy have then Lucy?
         */
-
+		int crayonsWillyHas = 1400;
+		int crayonsLucyHas = 290;
+		int crayonsWillyHasOverLucysAmount = crayonsWillyHas-crayonsLucyHas;
 
         /* Exercise 38
         38. There are 10 stickers on a page. If you have 22 pages of stickers, how
         many stickers do you have?
         */
-
+		int stickersPerPage = 10;
+		int numberOfPages = 22;
+		int totalStickers = stickersPerPage*numberOfPages;
 
         /* Exercise 39
         39. There are 100 cupcakes for 8 children to share. How much will each
         person get if they share the cupcakes equally?
         */
-
+		int cupcakesAvalibleForChildren = 100;
+		int childrenWhoWantCupcakes = 8;
+		int equalCupcakesPerChild = cupcakesAvalibleForChildren/childrenWhoWantCupcakes;
 
         /* Exercise 40
         40. She made 47 gingerbread cookies which she will distribute equally in
         tiny glass jars. If each jar is to contain six cookies, how many
         cookies will not be placed in a jar?
         */
-
+		int gingerbreadCookiesMade = 47;
+		int cookieAmountThatFitInJar = 6;
+		int cookiesNotInJars = gingerbreadCookiesMade%cookieAmountThatFitInJar;
 
         /* Exercise 41
         41. She also prepared 59 croissants which she plans to give to her 8
