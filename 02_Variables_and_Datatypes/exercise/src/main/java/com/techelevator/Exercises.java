@@ -327,7 +327,7 @@ public class Exercises {
         */
 		int cupcakesAvalibleForChildren = 100;
 		int childrenWhoWantCupcakes = 8;
-		int equalCupcakesPerChild = cupcakesAvalibleForChildren/childrenWhoWantCupcakes;
+		double equalCupcakesPerChild = (double)cupcakesAvalibleForChildren/childrenWhoWantCupcakes;
 
         /* Exercise 40
         40. She made 47 gingerbread cookies which she will distribute equally in
@@ -343,49 +343,65 @@ public class Exercises {
         neighbors. If each neighbor received an equal number of croissants,
         how many will be left with Marian?
         */
-
+		int croissantsPrepared = 59;
+		int neighborsMarianHas = 8;
+		int croissantsLeftForMarian = croissantsPrepared%neighborsMarianHas;
 
         /* Exercise 42
         42. Marian also baked oatmeal cookies for her classmates. If she can
         place 12 cookies on a tray at a time, how many trays will she need to
         prepare 276 oatmeal cookies at a time?
         */
-
+		int cookiesThatFitOnTray = 12;
+		int cookiesMarianNeedsToPrepare = 276;
+		int traysNeededByMarian = cookiesMarianNeedsToPrepare/cookiesThatFitOnTray;
 
         /* Exercise 43
         43. Marian’s friends were coming over that afternoon so she made 480
         bite-sized pretzels. If one serving is equal to 12 pretzels, how many
         servings of bite-sized pretzels was Marian able to prepare?
         */
-
+		int biteSizedPretzlesPrepared = 480;
+		int pretzlesPerServing = 12;
+		int servingsMadeByMarian = biteSizedPretzlesPrepared/pretzlesPerServing;
 
         /* Exercise 44
         44. Lastly, she baked 53 lemon cupcakes for the children living in the city
         orphanage. If two lemon cupcakes were left at home, how many
         boxes with 3 lemon cupcakes each were given away?
         */
-
+		int lemonCupcakesBakedForChildrenInOrphanage = 53;
+		int cupcakesLeftAtHome = 2;
+		int cupcakesNotLeftAtHome = lemonCupcakesBakedForChildrenInOrphanage-cupcakesLeftAtHome;
+		int cupcakesPerBox = 3;
+		int boxesNeededToGIveAwayCupcakes = cupcakesNotLeftAtHome/cupcakesPerBox;
 
         /* Exercise 45
         45. Susie's mom prepared 74 carrot sticks for breakfast. If the carrots
         were served equally to 12 people, how many carrot sticks were left
         uneaten?
         */
-
+		int carrotSticksPreparedBySusiesMom = 74;
+		int carrotsPerPerson = 12;
+		int carrotsLeftOverAfterBreakfast = carrotSticksPreparedBySusiesMom%carrotsPerPerson;
 
         /* Exercise 46
         46. Susie and her sister gathered all 98 of their teddy bears and placed
         them on the shelves in their bedroom. If every shelf can carry a
         maximum of 7 teddy bears, how many shelves will be filled?
         */
-
+		int teddyBearsGatheredBySusieAndSister = 98;
+		int teddyBearsEachShelfHolds = 7;
+		int shelvesFilledByTeddyBears = teddyBearsGatheredBySusieAndSister/teddyBearsEachShelfHolds;
 
         /* Exercise 47
         47. Susie’s mother collected all family pictures and wanted to place all of
         them in an album. If an album can contain 20 pictures, how many
         albums will she need if there are 480 pictures?
         */
-
+		int picturesOfSusiesFamily = 480;
+		int picturesOfFamilyPerAlbum = 20;
+		int albumsNeededForSusiesFamilyPictures = picturesOfSusiesFamily/picturesOfFamilyPerAlbum;
 
         /* Exercise 48
         48. Joe, Susie’s brother, collected all 94 trading cards scattered in his
@@ -393,27 +409,37 @@ public class Exercises {
         cards, how many boxes were filled and how many cards are there in
         the unfilled box?
         */
-
+		int cardSusiesBrotherHas = 94;
+		int cardsThatFitInBoxes = 8;
+		int boxesFilledByCards = cardSusiesBrotherHas/cardsThatFitInBoxes;
+		int cardsLeftInUnfilledBox = cardSusiesBrotherHas%cardsThatFitInBoxes;
 
         /* Exercise 49
         49. Susie’s father repaired the bookshelves in the reading room. If he has
         210 books to be distributed equally on the 10 shelves he repaired,
         how many books will each shelf contain?
         */
-
+		int booksOwnedBySusiesFather = 210;
+		int shelvesFatherHasForBooks = 10;
+		int booksPerShelf = booksOwnedBySusiesFather/shelvesFatherHasForBooks;
 
         /* Exercise 50
         50. Cristina baked 17 croissants. If she planned to serve this equally to
         her seven guests, how many will each have?
         */
-
+		int croissantsBakedByCristina = 17;
+		int guestsCristinaHas = 7;
+		double croissantsPerCristinaGuest = (double) croissantsBakedByCristina/guestsCristinaHas;
 
 	    /* Exercise 51
 	    51. Bill and Jill are house painters. Bill can paint a 12 x 14 room in 2.15 hours, while Jill averages
 	    1.90 hours. How long will it take the two painters working together to paint 5 12 x 14 rooms?
 	    Hint: Calculate the hourly rate for each painter, combine them, and then divide the total walls in feet by the combined hourly rate of the painters.
 	    */
-
+		double squareFootPerHourForBill = (12*14)/2.15;
+		double squareFootPerHourForJill = (12*14)/1.90;
+		double squareFootNeededToBePainted = (12*14)*5;
+		double hoursNeededToFinishFiveRooms = squareFootNeededToBePainted/(squareFootPerHourForBill+squareFootPerHourForJill);
 
 	    /* Exercise 52
 	    52. Create and assign variables to hold a first name, last name, and middle initial. Using concatenation,
@@ -422,13 +448,19 @@ public class Exercises {
 		with a period. Use "Grace", "Hopper, and "B" for the first name, last name, and middle initial.
 		Example: "John", "Smith, "D" —> "Smith, John D."
 	    */
+		String firstName = "Grace";
+		String lastName = "Hopper";
+		String middleName = "B";
+		String fullName = lastName+", "+firstName+" "+middleName+".";
 
 
 	    /* Exercise 53
 	    53. The distance between New York and Chicago is 800 miles, and the train has already travelled 537 miles.
 	    What percentage of the trip as a whole number has been completed?
 	    */
-
+		int distanceBetweenNewYorkAndChicago = 800;
+		int distanceTraveledByTrain = 537;
+		int percentOfDistanceTraveled = distanceTraveledByTrain*100/distanceBetweenNewYorkAndChicago;
 	}
 
 }
