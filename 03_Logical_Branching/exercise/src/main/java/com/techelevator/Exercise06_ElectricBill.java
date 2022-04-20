@@ -24,7 +24,13 @@ public class Exercise06_ElectricBill {
     calculateElectricBill(110) ➔ 22.5
      */
     public double calculateElectricBill(double unitsUsed) {
-        return 0;
+        double customerOwes=unitsUsed*0.20;
+        if(unitsUsed>EXCESS_UNITS_LIMIT){
+            customerOwes=100*0.2;
+            customerOwes+= (unitsUsed-100)*0.25;
+            return customerOwes;
+        }
+        return customerOwes;
     }
 
     /*
@@ -39,7 +45,21 @@ public class Exercise06_ElectricBill {
     calculateElectricBill(110, true) ➔ 21.375
      */
     public double calculateElectricBill(double unitsUsed, boolean hasRenewableEnergy) {
-        return 0;
+        double customerOwes=unitsUsed*0.20;
+        if(unitsUsed>EXCESS_UNITS_LIMIT){
+            customerOwes=100*0.2;
+            customerOwes+= (unitsUsed-100)*0.25;
+            if(hasRenewableEnergy){
+                customerOwes=customerOwes-(customerOwes*0.05);
+                return customerOwes;
+            }
+            return customerOwes;
+        }
+        else if(hasRenewableEnergy){
+            customerOwes=customerOwes-(customerOwes*0.05);
+            return customerOwes;
+        }
+        return customerOwes;
     }
 
     /*
@@ -60,6 +80,30 @@ public class Exercise06_ElectricBill {
     calculateElectricBill(110, 120) ➔ -2.0
      */
     public double calculateElectricBill(double unitsUsed, double unitsReturned) {
-        return 0;
+        double unitsAfterReturnedUnits = unitsUsed-unitsReturned;
+        double customerOwes = unitsAfterReturnedUnits*0.20;
+        double returnRate = unitsReturned*0.20;
+        double refund;
+        if (unitsReturned>unitsUsed){
+            refund = (unitsUsed-unitsReturned)*0.20;
+            return refund;
+        }
+        else if(unitsAfterReturnedUnits>EXCESS_UNITS_LIMIT){
+            customerOwes=100*0.2;
+            if(unitsReturned>0){
+                customerOwes = customerOwes-returnRate;
+                customerOwes+= (unitsAfterReturnedUnits-100)*0.25;
+                customerOwes -= customerOwes*0.05;
+                return customerOwes;
+            }
+            customerOwes+= (unitsAfterReturnedUnits-100)*0.25;
+            return customerOwes;
+        }
+        else if(unitsReturned>0){
+            customerOwes -= customerOwes*0.05;
+            customerOwes=customerOwes-returnRate;
+            return customerOwes;
+        }
+        return customerOwes;
     }
 }

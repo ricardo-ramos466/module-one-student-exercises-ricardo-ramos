@@ -160,6 +160,7 @@ if (highTemperatureF <= 0) {
     System.out.println("* Bundle up! Wear everything you have!");
 } else if (!isAboveFreezing) {
     System.out.println("* Please wear a warm winter coat!");
+4
 } else if (highTemperatureF < 65) {
     System.out.println("* Take along a light jacket.");
 }

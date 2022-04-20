@@ -22,7 +22,16 @@ public class Exercise01_ShippingTotal {
     calculateShippingTotal(45) ➔ 23.75
      */
     public double calculateShippingTotal(int weightPounds) {
-        return 0;
+        double priceForShipping;
+        if (weightPounds<=40){
+            priceForShipping = weightPounds*0.50;
+            return priceForShipping;
+        }
+        else{
+            double valueBelow40Pounds = 40*0.50;
+            priceForShipping = ((weightPounds-40)*0.75)+valueBelow40Pounds;
+            return priceForShipping;
+        }
     }
 
     /*
@@ -38,7 +47,24 @@ public class Exercise01_ShippingTotal {
     calculateShippingTotal(45, true) ➔ 21.375
      */
     public double calculateShippingTotal(int weightPounds, boolean hasDiscount) {
-        return 0;
+        double priceForShipping;
+        if (weightPounds<=40){
+            priceForShipping = weightPounds*0.50;
+            if(hasDiscount){
+                double discountedPrice = priceForShipping-(priceForShipping*.10);
+                return discountedPrice;
+            }
+            return priceForShipping;
+        }
+        else {
+            double valueBelow40Pounds = 40 * 0.50;
+            priceForShipping = ((weightPounds - 40) * 0.75) + valueBelow40Pounds;
+            if(hasDiscount){
+                double discountedPrice = priceForShipping-(priceForShipping*.10);
+                return discountedPrice;
+            }
+            return priceForShipping;
+        }
     }
 
     /*
@@ -53,6 +79,23 @@ public class Exercise01_ShippingTotal {
     calculateShippingTotal(45, 0.2) ➔ 19.0
      */
     public double calculateShippingTotal(int weightPounds, double discountPercentage) {
-        return 0;
+        double priceForShipping;
+        if (weightPounds<=40){
+            priceForShipping = weightPounds*0.50;
+            if(discountPercentage>0){
+                double discountedPrice = priceForShipping-(priceForShipping*discountPercentage);
+                return discountedPrice;
+            }
+            return priceForShipping;
+        }
+        else {
+            double valueBelow40Pounds = 40 * 0.50;
+            priceForShipping = ((weightPounds - 40) * 0.75) + valueBelow40Pounds;
+            if(discountPercentage>0){
+                double discountedPrice = priceForShipping-(priceForShipping*discountPercentage);
+                return discountedPrice;
+            }
+            return priceForShipping;
+        }
     }
 }
