@@ -91,7 +91,6 @@ public class Exercise06_ElectricBill {
         else if(unitsAfterReturnedUnits>EXCESS_UNITS_LIMIT){
             customerOwes=100*0.2;
             if(unitsReturned>0){
-                customerOwes = customerOwes-returnRate;
                 customerOwes+= (unitsAfterReturnedUnits-100)*0.25;
                 customerOwes -= customerOwes*0.05;
                 return customerOwes;
@@ -101,7 +100,6 @@ public class Exercise06_ElectricBill {
         }
         else if(unitsReturned>0){
             customerOwes -= customerOwes*0.05;
-            customerOwes=customerOwes-returnRate;
             return customerOwes;
         }
         return customerOwes;
