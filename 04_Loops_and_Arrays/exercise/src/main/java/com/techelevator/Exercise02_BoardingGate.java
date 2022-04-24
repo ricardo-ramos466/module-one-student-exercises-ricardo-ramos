@@ -24,7 +24,15 @@ public class Exercise02_BoardingGate {
     generateSeatingChart(2) → [true, true]
      */
     public boolean[] generateSeatingChart(int numberOfSeats) {
-        return new boolean[] {};
+        //Declare boolean
+        boolean[] seating;
+        seating= new boolean[(numberOfSeats)];
+        //for every seat put true
+        for (int i = 0; i<numberOfSeats;i++){
+            seating[i] = true;
+        }
+        //give result
+        return seating;
     }
 
     /*
@@ -41,7 +49,16 @@ public class Exercise02_BoardingGate {
     getAvailableSeatCount([]) → 0
      */
     public int getAvailableSeatCount(boolean[] seatingChart) {
-        return 0;
+        //declare when seats are available
+        int seatsThatAreAvailable = 0;
+        for (int i = 0;i<seatingChart.length; i++){
+            //if true add seat
+            if (seatingChart[i]){
+                //add 1 to available seats
+                seatsThatAreAvailable++;
+            }
+        }
+        return seatsThatAreAvailable;
     }
 
     /*
@@ -57,7 +74,16 @@ public class Exercise02_BoardingGate {
     getNumberOfFullRows([false, true, true, false, true, true]) → 0
      */
     public int getNumberOfFullRows(boolean[] seatingChart) {
-        return 0;
+        //declare empty rows
+        int emptyRows = 0;
+        //to make i divisible by three i starts at three then removes one for the seats
+        for (int i =3;(i-1)<=seatingChart.length;i++){
+            //checking if all seats are empty
+            if ( i % 3 == 0 && !seatingChart[i-3] && !seatingChart[(i-1)] && !seatingChart[(i-2)]){
+                emptyRows+=1;
+            }
+        }
+        return emptyRows;
     }
 
 }
