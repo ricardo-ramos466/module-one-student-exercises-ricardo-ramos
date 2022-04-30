@@ -213,7 +213,15 @@ public class Exercises {
 	 middleTwo("Practice") → "ct"
 	 */
 	public String middleTwo(String str) {
-		return null;
+		int removalAmount = str.length()-2;
+		int removalAmountPerSide = removalAmount/2;
+		if(str.length()>2){
+			str = str.substring(removalAmountPerSide,str.length()-(removalAmountPerSide));
+			return str;
+		}
+
+
+		return str;
 	}
 
 	/*
@@ -477,9 +485,17 @@ public class Exercises {
 	 altPairs("CodingHorror") → "Congrr"
 	 */
 	public String altPairs(String str) {
-		//for (int i = 0;i<str.length();i++)
-		//	if ()
-		return null;
+		String alt = "";
+		for (int i = 0;i<str.length();i+=4 ){
+			if ((str.length()-i)<2){
+				alt += str.substring(i,i+1);
+			}
+			else {
+				alt += str.substring(i, i + 2);
+			}
+		}
+
+		return alt;
 	}
 
 	/*
