@@ -232,7 +232,7 @@ public class Exercises {
 	 */
 	public boolean endsLy(String str) {
 		if(str.length()>1) {
-			String endsWith = str.substring(str.length()-2,str.length());
+			String endsWith = str.substring(str.length()-2);
 			if (endsWith.equals("ly")) {
 				return true;
 			}
@@ -248,7 +248,7 @@ public class Exercises {
 	 nTwice("Chocolate", 1) → "Ce"
 	 */
 	public String nTwice(String str, int n) {
-		str = str.substring(0,n)+str.substring(str.length()-(n),str.length());
+		str = str.substring(0,n)+str.substring(str.length()-(n));
 
 		return str;
 	}
@@ -341,15 +341,15 @@ public class Exercises {
 	 */
 	public String frontTimes(String str, int n) {
 		String strCopies = "";
-		String concatinatingStr="";
+		String concatenatingStr="";
 		if (str.length()>=3){
-			concatinatingStr = str.substring(0,3);
+			concatenatingStr = str.substring(0,3);
 		}
 		else{
-			concatinatingStr=str;
+			concatenatingStr=str;
 		}
 		for(n=n;n>0;n--) {
-			strCopies += concatinatingStr;
+			strCopies += concatenatingStr;
 		}
 		return strCopies;
 	}
@@ -460,7 +460,10 @@ public class Exercises {
 		if (str.length()<=2){
 			return str;
 		}
-		String removedX = "";
+		String noOuterX = str.substring(1,str.length()-1);
+		String removedX = str.substring(0,1)+noOuterX.replace("x","")+str.substring(str.length()-1);
+
+	/*	String removedX = "";
 		String checkX ="";
 		String xStart = str.substring(0,1);
 		String xEnd = str.substring(str.length()-1,str.length());
@@ -474,7 +477,7 @@ public class Exercises {
 		}
 		if(xEnd.equals("x")){
 			removedX+=xEnd;
-		}
+		}*/
 		return removedX;
 	}
 
@@ -506,7 +509,7 @@ public class Exercises {
 	 stringYak("yak123ya") → "123ya"
 	 */
 	public String stringYak(String str) {
-		String yakCheck = "";
+	/*	String yakCheck = "";
 		String noYak = "";
 		String strAdd = "";
 		for (int i = 0;i<str.length();i++){
@@ -523,6 +526,10 @@ public class Exercises {
 			else {
 				noYak+=strAdd;
 			}
+		}*/
+		String noYak ="";
+		if (str.contains("yak")){
+			noYak=str.replace("yak","");
 		}
 		return noYak;
 	}
