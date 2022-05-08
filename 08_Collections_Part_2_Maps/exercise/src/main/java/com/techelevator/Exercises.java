@@ -167,8 +167,20 @@ public class Exercises {
 	 */
 	public Map<String, Integer> wordCount(String[] words) {
 		Map<String,Integer> countMap = new HashMap<String,Integer>();
-		for ()
-		return null;
+		int count = 0;
+		for (String word:words){
+			for (int i = 0 ;i<words.length;i++) {
+				if (words[i].equals(word)){
+					count++;
+				}
+			}
+			if (!countMap.containsKey(word)){
+				countMap.put(word,count);
+			}
+
+			count = 0;
+		}
+		return countMap;
 	}
 
 	/*
@@ -183,7 +195,21 @@ public class Exercises {
 	 *
 	 */
 	public Map<Integer, Integer> integerCount(int[] ints) {
-		return null;
+		Map<Integer,Integer> countMapInts = new HashMap<Integer,Integer>();
+		int count = 0;
+		for (int num:ints){
+			for (int i = 0 ;i<ints.length;i++) {
+				if (ints[i]==(num)){
+					count++;
+				}
+			}
+			if (!countMapInts.containsKey(num)){
+				countMapInts.put(num,count);
+			}
+
+			count = 0;
+		}
+		return countMapInts;
 	}
 
 	/*
@@ -196,7 +222,26 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Boolean> wordMultiple(String[] words) {
-		return null;
+		Map<String,Boolean> isThereMultiple = new HashMap<String,Boolean>();
+		Boolean multiple = false;
+		int count = 0;
+		for (String word:words){
+			for (int i = 0 ;i<words.length;i++) {
+				if (words[i]==(word)){
+					count++;
+				}
+				if (count>1){
+					multiple= true;
+				}
+			}
+			if (!isThereMultiple.containsKey(word)){
+				isThereMultiple.put(word,multiple);
+			}
+
+			count = 0;
+			multiple= false;
+		}
+		return isThereMultiple;
 	}
 
 	/*
@@ -211,7 +256,19 @@ public class Exercises {
 	 */
 	public Map<String, Integer> consolidateInventory(Map<String, Integer> mainWarehouse,
 			Map<String, Integer> remoteWarehouse) {
-		return null;
+		Map<String,Integer> consolidatedWarehouse = new HashMap<String,Integer>();
+		for (Map.Entry<String,Integer> inventory:mainWarehouse.entrySet()) {
+			consolidatedWarehouse.put(inventory.getKey(),inventory.getValue());
+		}
+		for (Map.Entry<String,Integer> inventory:remoteWarehouse.entrySet()){
+			if (consolidatedWarehouse.containsKey(inventory.getKey())){
+				consolidatedWarehouse.put(inventory.getKey(),mainWarehouse.get(inventory.getKey())+inventory.getValue());
+			}
+			else if(!consolidatedWarehouse.containsKey(inventory.getKey())){
+				consolidatedWarehouse.put(inventory.getKey(),inventory.getValue());
+			}
+		}
+		return consolidatedWarehouse;
 	}
 
 	/*
@@ -230,7 +287,25 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> last2Revisited(String[] words) {
-		return null;
+		Map<String,Integer> lastTwo = new HashMap<String,Integer>();
+		int timesSubstringAppears = 0;
+		int endingString;
+		for (String word:words) {
+			endingString=word.length()-2;
+			if (word.length()<4){
+				lastTwo.put(word,0);
+			}
+			for (int i = 0 ; i<word.length()-3;i++){
+				String substringOfWord = word.substring(i,i+2);
+				String endingSubstringOfWord = word.substring(word.length()-2);
+				if (substringOfWord.equals(endingSubstringOfWord)){
+					timesSubstringAppears++;
+				}
+			}
+			lastTwo.put(word,timesSubstringAppears);
+			timesSubstringAppears =0;
+		}
+		return lastTwo;
 	}
 
 }
