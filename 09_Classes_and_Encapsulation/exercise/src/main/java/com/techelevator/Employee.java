@@ -6,7 +6,7 @@ private String lastName = null;
 private String firstName = null;
 private String department = null;
 private double annualSalary = 0;
-
+// Constructor
 public Employee(int employeeId, String firstName, String lastName, double annualSalary){
     this.employeeId = employeeId;
     this.firstName= firstName;
@@ -19,7 +19,7 @@ public void raiseSalary(double percent){
         annualSalary =annualSalary*percentGain;
     }
 }
-
+// getters and setters
     public int getEmployeeId() {
         return employeeId;
     }
@@ -46,5 +46,9 @@ public void raiseSalary(double percent){
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+    public String getFullName(){
+    String fullName = lastName+", "+firstName;
+    return fullName;
     }
 }

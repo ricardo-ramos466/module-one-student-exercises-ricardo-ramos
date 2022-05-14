@@ -4,7 +4,7 @@ public class Television {
     boolean isOn = false;
     int currentChannel = 3;
     int currentVolume = 2;
-
+// getters and setters
     public boolean isOn() {
         return isOn;
     }

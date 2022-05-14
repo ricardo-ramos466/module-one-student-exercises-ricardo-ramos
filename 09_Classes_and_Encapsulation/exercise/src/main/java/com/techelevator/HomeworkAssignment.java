@@ -5,7 +5,7 @@ public class HomeworkAssignment {
     private int possibleMarks;
     private String submitterName = null;
     private String letterGrade = null;
-
+ // getters and setters
     public int getPossibleMarks() {
         return possibleMarks;
     }
@@ -44,7 +44,7 @@ public class HomeworkAssignment {
         this.earnedMarks = earnedMarks;
     }
 
-
+// constructor
     public HomeworkAssignment (int possibleMarks, String submitterName){
         this.possibleMarks = possibleMarks;
         this.submitterName = submitterName;

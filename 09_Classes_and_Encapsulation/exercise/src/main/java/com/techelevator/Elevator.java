@@ -4,11 +4,11 @@ public class Elevator {
     int currentFloor = 1;
     int numberOfFloors;
     boolean doorOpen = false;
-
+//Constructor
     public Elevator(int numberOfLevels) {
         this.numberOfFloors = numberOfLevels;
     }
-
+//getters and setters
     public boolean isDoorOpen() {
         return doorOpen;
     }
@@ -34,26 +34,24 @@ public class Elevator {
     }
 
     public void goUp(int desiredFloor) {
-        if (!doorOpen && desiredFloor <= numberOfFloors && desiredFloor>currentFloor) {
-            for (int i = 0; i< numberOfFloors; i++)
-                if (currentFloor!= desiredFloor){
+        if (!doorOpen && desiredFloor <= numberOfFloors && desiredFloor > currentFloor) {
+            for (int i = 0; i < numberOfFloors; i++)
+                if (currentFloor != desiredFloor) {
                     currentFloor++;
-                }
-                else if(currentFloor==desiredFloor) {
+                } else if (currentFloor == desiredFloor) {
                     break;
                 }
         }
     }
 
     public void goDown(int desiredFloor) {
-        if (!doorOpen && desiredFloor >= numberOfFloors&& desiredFloor<currentFloor) {
-            for (int i = 0; i< numberOfFloors; i++)
-                if (currentFloor!= desiredFloor){
-                    currentFloor--;
+        if (!doorOpen && desiredFloor <= numberOfFloors && desiredFloor < currentFloor && desiredFloor>=1) {
+            for (int i = 0; i < numberOfFloors; i++) {
+                currentFloor--;
+                if (currentFloor == desiredFloor) {
+                    break;
                 }
-            else if (currentFloor==desiredFloor){
-                break;
-                }
+            }
         }
     }
 }
