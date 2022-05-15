@@ -1,9 +1,9 @@
 package com.techelevator;
 
 public class BankAccount {
-    protected String accountHolderName;
-    protected String accountNumber;
-    protected int balance;
+    private String accountHolderName;
+    private String accountNumber;
+    private int balance;
     // Constructor for new accounts and existing accounts
     public BankAccount(String accountHolderName, String accountNumber){
         this.accountHolderName =  accountHolderName;

@@ -12,14 +12,15 @@ public class SavingsAccount extends BankAccount{
 // override for additional $2 fee for withdraws under $150
     @Override
     public int withdraw(int amountToWithdraw) {
+        int balance = this.getBalance();
         if (balance-amountToWithdraw < 150 && (balance- (amountToWithdraw +2)) >= 0){
-            balance-=amountToWithdraw+2;
-            return  balance;
+            amountToWithdraw+=2;
+            return  super.withdraw(amountToWithdraw);
         }
         else if (balance-amountToWithdraw >= 150){
             return super.withdraw(amountToWithdraw);
         }
 
-        return balance;
+        return this.getBalance();
     }
 }

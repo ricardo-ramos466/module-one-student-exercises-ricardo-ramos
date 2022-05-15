@@ -11,13 +11,14 @@ public class CheckingAccount extends BankAccount {
 //override method for withdrawal
     @Override
     public int withdraw(int amountToWithdraw) {
+        int balance = this.getBalance();
         if ((balance - amountToWithdraw) < 0 && (balance - amountToWithdraw) > -100 ){
-            balance -= amountToWithdraw+10;
-            return  balance;
+             amountToWithdraw+=10;
+            return  super.withdraw(amountToWithdraw);
         }
         else if (balance-amountToWithdraw>0){
             return super.withdraw(amountToWithdraw);
         }
-        return balance;
+        return this.getBalance();
     }
 }
