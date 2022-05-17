@@ -39,5 +39,11 @@ public class BankAccount {
         balance = balance - amountToWithdraw;
         return balance;
     }
+    public int transferTo(BankAccount destinationAccount, int tranferAmount) {
+        withdraw(tranferAmount);
+        destinationAccount.deposit(tranferAmount);
+        return balance;
+
+    }
 
 }
