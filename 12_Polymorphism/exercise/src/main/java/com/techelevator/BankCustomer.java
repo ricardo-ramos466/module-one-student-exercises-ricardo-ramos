@@ -3,7 +3,7 @@ package com.techelevator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BankCustomer implements Accountable {
+public class BankCustomer {
     private String name;
     private String address;
     private String phoneNumber;
@@ -35,22 +35,25 @@ public class BankCustomer implements Accountable {
 
 
     public Accountable[] getAccounts(){
-        return (Accountable[]) accounts.toArray();
-    }
-    public void addAccount(Accountable newAccount){
-        accounts.add(newAccount);
+        Accountable[] allAccounts = new Accountable[accounts.size()];
+        for (int i = 0; i<accounts.size();i++){
+            allAccounts[i] = accounts.get(i);
+        }
+
+        return allAccounts;
     }
 
-    @Override
-    public int getBalance() {
-        int balance = 0;
-        for (Accountable i:getAccounts()) {
-            balance+= Integer.valueOf(String.valueOf(i));
-        }
-        return balance;
+    public void addAccount(Accountable newAccount) {
+    accounts.add(newAccount);
     }
+
+
     public boolean isVip(){
-        if (getBalance()>=25000){
+        int allAccountsBalance = 0;
+        for (Accountable account:accounts){
+            allAccountsBalance+=account.getBalance();
+        }
+        if (allAccountsBalance>=25000){
             return true;
         }
         return false;
