@@ -35,12 +35,12 @@ public class BankCustomer {
 
 
     public Accountable[] getAccounts(){
-        Accountable[] allAccounts = new Accountable[accounts.size()];
-        for (int i = 0; i<accounts.size();i++){
-            allAccounts[i] = accounts.get(i);
-        }
+//        Accountable[] allAccounts = new Accountable[accounts.size()];
+//        for (int i = 0; i<accounts.size();i++){
+//            allAccounts[i] = accounts.get(i);
+//        }
 
-        return allAccounts;
+        return accounts.toArray(new Accountable[accounts.size()]);
     }
 
     public void addAccount(Accountable newAccount) {
