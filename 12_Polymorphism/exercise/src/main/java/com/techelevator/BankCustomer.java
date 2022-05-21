@@ -7,7 +7,7 @@ public class BankCustomer {
     private String name;
     private String address;
     private String phoneNumber;
-    private List<Accountable> accounts = new ArrayList<Accountable>();
+    private List<Accountable> accounts = new ArrayList<>();
 
     public String getName() {
         return name;
