@@ -8,16 +8,16 @@ public class AnimalGroupName {
     private final Map<String, String> animals = new HashMap<>();
 
     public AnimalGroupName() {
-        animals.put("rhino", "Crash");
-        animals.put("giraffe", "Tower");
-        animals.put("elephant", "Herd");
-        animals.put("lion", "Pride");
-        animals.put("crow", "Murder");
-        animals.put("pigeon", "Kit");
-        animals.put("flamingo", "Pat");
-        animals.put("deer", "Herd");
-        animals.put("dog", "Pack");
-        animals.put("crocodile", "Float");
+        getAnimals().put("rhino", "Crash");
+        getAnimals().put("giraffe", "Tower");
+        getAnimals().put("elephant", "Herd");
+        getAnimals().put("lion", "Pride");
+        getAnimals().put("crow", "Murder");
+        getAnimals().put("pigeon", "Kit");
+        getAnimals().put("flamingo", "Pat");
+        getAnimals().put("deer", "Herd");
+        getAnimals().put("dog", "Pack");
+        getAnimals().put("crocodile", "Float");
     }
 
     /*
@@ -50,8 +50,8 @@ public class AnimalGroupName {
      */
     public String getHerd(String animalName) {
 
-        if (animalName != null && animals.containsKey(animalName.toLowerCase())) {
-            return animals.get(animalName.toLowerCase());
+        if (animalName != null && getAnimals().containsKey(animalName.toLowerCase())) {
+            return getAnimals().get(animalName.toLowerCase());
         } else {
             return "unknown";
         }
@@ -60,4 +60,7 @@ public class AnimalGroupName {
         //return animals.getOrDefault(animalName.toLowerCase(),"unknown");
     }
 
+    public Map<String, String> getAnimals() {
+        return animals;
+    }
 }
