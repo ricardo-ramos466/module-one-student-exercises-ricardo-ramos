@@ -23,7 +23,7 @@ public class BookConverter {
         Scanner userInput = new Scanner(System.in);
         // Prompt the user for a file path - path should look like "data/jekyll-and-hyde.txt"
         System.out.print("Enter path to the book file: ");
-        String filePath = userInput.nextLine();
+        String filePath = "tutorial/data/"+userInput.nextLine().toLowerCase().replace(" ","-")+".txt";
 
         // Create a File object using the path
         File bookFile = new File(filePath);
@@ -36,7 +36,10 @@ public class BookConverter {
         /*
         Step 2: Open a file for writing the converted text into it
          */
-        try (Scanner fileInput = new Scanner(bookFile)) {
+        // Create a File object for the output file
+        File convertedFile = getConvertedFile(bookFile);
+        // Open both the input and output files.
+        try (Scanner fileInput = new Scanner(bookFile); PrintWriter writer = new PrintWriter(convertedFile)) {
             // Loop until the end of file is reached
             while (fileInput.hasNextLine()) {
                 // Read the next line into 'lineOfText'
@@ -44,8 +47,14 @@ public class BookConverter {
                 lineCount++;
 
                 // Print the file to the user
-                System.out.println(lineOfText);
+               writer.println(lineOfText.toUpperCase());
+               String message = "Converted " + lineCount +
+                       " lines of file " + bookFile.getName() +
+                       " to " + convertedFile.getName() +
+                       " on " + new Date();
+               System.out.println(message);
             }
+
         } catch (FileNotFoundException e) {
             // Could not find the file at the specified path.
             System.out.println("The file was not found: " + bookFile.getAbsolutePath());
@@ -63,7 +72,14 @@ public class BookConverter {
         throughout history. If the file doesn't exist it will be created. If it already exists, its
         contents will be preserved, and the lines written here will be appended to what was already there.
          */
-
+        String auditPath = "BookConverter.log";
+        File logFile = new File(auditPath);
+        // Using a FileOutputStream with true passed into the constructor opens the file for append.
+        try (PrintWriter log = new PrintWriter(new FileOutputStream(logFile,true))){
+            log.println((message));
+        } catch (FileNotFoundException e){
+            System.out.println("*** Unable to open log file: " + logFile.getAbsolutePath());
+        }
     }
 
     /**
